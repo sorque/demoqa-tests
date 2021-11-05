@@ -1,0 +1,17 @@
+plugins {
+    id 'java-library'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation ("org.jinit.jupiter:junit-jupiter:5.7.1")
+    testRuntimeOnlu("org.jinit.jupiter:junit-jupiter-engine:5.7.1")
+
+}
+
+test {
+    useJUnitPlatform()
+}
