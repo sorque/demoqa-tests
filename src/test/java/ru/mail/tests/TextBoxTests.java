@@ -16,12 +16,13 @@ public class TextBoxTests {
 
     @Test
     void fillFormTest() {
+        String userName = "Mikhael";
 
         //переход по ссылке
         open("https://demoqa.com/text-box");
 
         //заполнение формы
-        $("#userName").setValue("Mikhael");
+        $("#userName").setValue(userName);
         $("#userEmail").setValue("sorq@mail.ru");
         $("#currentAddress").setValue("Moscow, Some street 44");
         $("#permanentAddress").setValue("Moscow, Another street 33");
@@ -29,10 +30,10 @@ public class TextBoxTests {
         //отправка формы
         $("#submit").click();
 
-        $("#output #name").shouldHave(text("Mikhael"));
+        //проверка отправленных данных
+        $("#output #name").shouldHave(text(userName));
         $("#output #email").shouldHave(text("sorq@mail.ru"));
         $("#output #currentAddress").shouldHave(text("Moscow, Some street 44"));
         $("#output #permanentAddress").shouldHave(text("Moscow, Another street 33"));
-
     }
 }
