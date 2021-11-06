@@ -1,8 +1,8 @@
-package ru.mail;
+package ru.mail.docs;
 
 import org.junit.jupiter.api.*;
 
-public class DemoQATest {
+public class Junit5Examples {
 
     @BeforeAll
     static void beforeAll() {
