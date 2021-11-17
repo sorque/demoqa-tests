@@ -31,10 +31,9 @@ public class PracticeForm {
         $("#dateOfBirthInput").click();
         $(".react-datepicker__year-select").selectOptionByValue("1994");
         $(".react-datepicker__month-select").selectOption("October");
-        $(".react-datepicker__day react-datepicker__day--030:not(.react-datepicker__day--outside-month)").click();
-        //$$(".react-datepicker__day react-datepicker__day--030").filter(not(cssClass("react-datepicker__day--outside-month"))).first().click();
-
-
+        //$(".react-datepicker__day react-datepicker__day--030:not(.react-datepicker__day--outside-month)").click();
+        $$(".react-datepicker__day--030").filter(not(cssClass("react-datepicker__day--outside-month"))).first().click();
+        $("#subjectsContainer .subjects-auto-complete__value-container").selectOptionByValue("Arts");         //setValue("Arts").pressEnter();
         $("#subjectsContainer").selectOption("Arts");
 
 
