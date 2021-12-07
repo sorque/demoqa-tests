@@ -2,6 +2,7 @@ package ru.mail.tests;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.selector.ByText;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
@@ -33,8 +34,22 @@ public class PracticeForm {
         $(".react-datepicker__month-select").selectOption("October");
         //$(".react-datepicker__day react-datepicker__day--030:not(.react-datepicker__day--outside-month)").click();
         $$(".react-datepicker__day--030").filter(not(cssClass("react-datepicker__day--outside-month"))).first().click();
-        $("#subjectsContainer .subjects-auto-complete__value-container").selectOptionByValue("Arts");         //setValue("Arts").pressEnter();
-        $("#subjectsContainer").selectOption("Arts");
+        $(byText("Reading")).click();
+        $("#currentAddress").setValue("some adress");
+        $("#state").click();
+        $(byText("NCR")).click();
+        $("#city").click();
+        $(byText("Delhi")).click();
+
+
+
+
+        //Gurgaon
+        //$(".css-tlfecz-indicatorContainer").click();//setValue("Haryana").pressEnter();
+        //$(".css-19bqh2r").selectOption("Haryana");
+        // css-yk16xz-control
+        $(byText("Reading")).click();
+
 
 
 
