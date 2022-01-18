@@ -32,9 +32,8 @@ public class PracticeForm {
         $("#dateOfBirthInput").click();
         $(".react-datepicker__year-select").selectOptionByValue("1994");
         $(".react-datepicker__month-select").selectOption("October");
-        //$(".react-datepicker__day react-datepicker__day--030:not(.react-datepicker__day--outside-month)").click();
-        $$(".react-datepicker__day--030").filter(not(cssClass("react-datepicker__day--outside-month"))).first().click();
-        $(byText("Reading")).click();
+        $("[aria-label=\"Choose Sunday, October 30th, 1994\"]").click();
+        //$x("//div[contains(@aria-label, \"October 30th, 1994\")]").click();
         $("#currentAddress").setValue("some adress");
         $("#state").click();
         $(byText("NCR")).click();
