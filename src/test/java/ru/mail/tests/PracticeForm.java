@@ -34,30 +34,19 @@ public class PracticeForm {
         $(".react-datepicker__month-select").selectOption("October");
         $("[aria-label=\"Choose Sunday, October 30th, 1994\"]").click();
         //$x("//div[contains(@aria-label, \"October 30th, 1994\")]").click();
+        $("#subjectsInput").setValue("Maths").pressEnter();
+        $("#subjectsInput").setValue("Arts").pressEnter();
+        $("#hobbiesWrapper").$(byText("Sports")).click();
         $("#currentAddress").setValue("some adress");
+        $("#uploadPicture").uploadFromClasspath("img/1.png");
         $("#state").click();
         $(byText("NCR")).click();
         $("#city").click();
         $(byText("Delhi")).click();
 
+        $("#submit").click();
 
-
-
-        //Gurgaon
-        //$(".css-tlfecz-indicatorContainer").click();//setValue("Haryana").pressEnter();
-        //$(".css-19bqh2r").selectOption("Haryana");
-        // css-yk16xz-control
-        $(byText("Reading")).click();
-
-
-
-
-
-
-
-
-
-
-
+        $(".table-responsive").isDisplayed();
+        $(".table-responsive").shouldHave(text("Mike Korovin"));
     }
 }
