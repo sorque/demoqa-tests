@@ -47,6 +47,7 @@ public class PracticeForm {
         $("#submit").click();
 
         $(".table-responsive").isDisplayed();
-        $(".table-responsive").shouldHave(text("Mike Korovin"));
+
+        $(".modal-header").shouldHave(text("Thanks for submitting the form"));
     }
 }
